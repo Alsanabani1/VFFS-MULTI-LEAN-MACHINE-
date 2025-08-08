@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Preliminary Feasibility Study - Multi-Lane Packaging Machine Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        
+        <!-- Study Cover -->
+        <div class="futuristic-header flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
+            <div class="header-image flex-shrink-0 w-full md:w-1/2 flex justify-center">
+                <img src="study_interface.png" alt="Study Interface Image" class="rounded-2xl neon-glow object-cover w-full md:w-[350px] max-w-full h-auto" style="max-height:1057px;">
+            </div>
+            <div class="header-content w-full md:w-1/2 flex flex-col items-center md:items-start justify-center">
+                <div class="arabic-text mb-6">
+                    <h1 class="text-4xl font-arabic">بسم الله الرحمن الرحيم</h1>
+                </div>
+                <h1 class="text-4xl text-electric-blue mb-4 font-bold font-orbitron">Preliminary Feasibility Study</h1>
+                <h2 class="text-3xl mb-6 text-neon-purple font-semibold font-orbitron">Multi-Lane Packaging Machine Project</h2>
+                <div class="text-xl text-neon-green mb-6">
+                    <p>Graduation Project for Mechatronics Department Students</p>
+                    <p class="font-semibold">Dhamar University</p>
+                </div>
+                <div class="bg-black bg-opacity-40 backdrop-blur-sm p-6 rounded-2xl border border-neon-blue border-opacity-50 mt-2 flex items-center gap-4 neon-border">
+                    <i class="fas fa-cogs text-neon-blue text-5xl"></i>
+                    <p class="text-neon-blue text-lg font-medium font-rajdhani">VFFS MULTI-LANE MACHINE</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="content-section">
+            <h2 class="section-title text-3xl mb-8" data-scroll="fade-left">
+                <span class="icon-wrapper">
+                    <i class="fas fa-list-ul"></i>
+                </span>
+                Table of Contents
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+                    <ul class="space-y-4">
+                        <li><a href="#introduction" class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-sm"></i>1. Project Introduction</a></li>
+                        <li><a href="#technical" class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-sm"></i>2. Technical Description</a></li>
+                        <li><a href="#market" class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-sm"></i>3. Market Study</a></li>
+                        <li><a href="#technical-study" class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-sm"></i>4. Technical Study</a></li>
+                    </ul>
+                </div>
+                <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+                    <ul class="space-y-4">
+                        <li><a href="#operational" class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-sm"></i>5. Operational Study</a></li>
+                        <li><a href="#financial" class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-sm"></i>6. Financial Study</a></li>
+                        <li><a href="#risks" class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-sm"></i>7. Risk Analysis</a></li>
+                        <li><a href="#references" class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-sm"></i>8. References</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Introduction -->
+        <div id="introduction" class="content-section">
+            <h2 class="section-title text-4xl mb-8"  data-scroll="fade-left">
+                <span class="icon-wrapper">
+                    <i class="fas fa-rocket"></i>
+                </span>
+                1. Project Introduction
+            </h2>
+            
+            <div class="highlight-box bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+                <p class="text-gray-300 leading-relaxed">
+                    With the significant expansion in industries and machinery, and the increasing demand for fast and accurate packaging solutions, packaging technologies have become a fundamental factor in improving product quality, reducing waste, and increasing production efficiency.
+                    One of the most prominent packaging methods is the Stick Pack packaging used for filling small quantities of liquids or powders in a practical and economical way.
+                    Despite the availability of this technology in the market, most automated packaging lines rely on expensive imported machines or manual packaging, leading to limited efficiency or productivity in traditional single-lane machines, with a scarcity of locally manufactured multi-lane machines.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="card bg-dark-blue text-light p-6 rounded-lg shadow-lg" data-scroll="fade-in">
+                    <h4 class="font-semibold text-neon-blue mb-4 text-xl">
+                        <span class="icon-wrapper mr-3">
+                            <i class="fas fa-lightbulb"></i>
+                        </span>
+                        1.1 Project Idea
+                    </h4>
+                    <p class="text-gray-300 leading-relaxed">
+                        The project aims to design and manufacture a prototype of an automated multi-lane packaging machine (Multi-Lane) for filling products (liquids or powders) and packaging them in small packages (stick packs).
+                        The machine relies on mechanical and pneumatic systems to control film movement, sealing, and filling, in addition to an automated control system using PLC, HMI touch screen, and IoT system for easy control and monitoring of the project from anywhere in the world.
+                        To solve the problem of manual packaging or slow and inefficient automated packaging, by creating a high-capacity machine that works on multiple synchronized lanes, doubling production quantity and saving time, while ensuring filling accuracy and sealing quality.
+                    </p>
+                </div>
+                <div class="card p-8" data-scroll="fade-in">
+                    <h4 class="font-semibold text-neon-blue mb-4 text-xl">
+                        <span class="icon-wrapper mr-3">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                        1.2 Problem Addressed by the Project
+                    </h4>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Local factories, especially small and medium-sized ones, face several challenges in packaging operations:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Low productivity due to reliance on single-lane machines or manual packaging</li>
+                        <li>High operating costs due to time and raw material consumption</li>
+                        <li>Inability to compete with imported products due to high costs</li>
+                        <li>Reducing reliance on imports and encouraging local manufacturing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card p-8 mb-8" data-scroll="fade-in">
+                <h4 class="font-semibold text-neon-purple mb-6 text-xl">
+                    <span class="icon-wrapper mr-3">
+                        <i class='bx bx-target-lock'></i>
+                    </span>
+                    1.3 Project Objectives
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="stats-card bg-dark-blue p-6 rounded-lg shadow-md" data-scroll="fade-in">
+                        <h5 class="font-semibold text-neon-blue mb-4 text-lg">Technical Objectives</h5>
+                        <ul class="text-sm text-gray-400 space-y-3 text-left">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-neon-blue ml-2 mt-1"></i>
+                                Design a 3 parallel lane machine to increase productivity
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-neon-blue ml-2 mt-1"></i>
+                                Achieve filling accuracy with an error rate of ±1%
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-neon-blue ml-2 mt-1"></i>
+                                Automated control system PLC + HMI
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-neon-blue ml-2 mt-1"></i>
+                                Design according to industry standards using stainless steel materials
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="stats-card bg-dark-blue p-6 rounded-lg shadow-md" data-scroll="fade-in">
+                        <h5 class="font-semibold text-neon-green mb-4 text-lg">Production Objectives</h5>
+                        <ul class="text-sm text-gray-400 space-y-3 text-left">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-neon-green ml-2 mt-1"></i>
+                                Diversify products (liquids and powders)
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-neon-green ml-2 mt-1"></i>
+                                Production speed of 60-100 packages/minute compared to 30-40 in single-lane machines
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-neon-green ml-2 mt-1"></i>
+                                Save 30% of packaging time compared to traditional methods
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-neon-green ml-2 mt-1"></i>
+                                Reduce raw material waste due to high filling accuracy
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="stats-card bg-dark-blue p-6 rounded-lg shadow-md" data-scroll="fade-in">
+                        <h5 class="font-semibold text-neon-pink mb-4 text-lg">Marketing Objectives</h5>
+                        <ul class="text-sm text-gray-400 space-y-3 text-left">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-neon-pink ml-2 mt-1"></i>
+                                Provide a machine at 40-50% lower cost than imported machines
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-neon-pink ml-2 mt-1"></i>
+                                Local manufacturing provides a high-efficiency machine that competes with imports at a lower price
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-neon-pink ml-2 mt-1"></i>
+                                Reduce reliance on imports and encourage local manufacturing
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-neon-pink ml-2 mt-1"></i>
+                                Enable small factories to compete with high-quality products
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stats-card bg-dark-blue p-6 rounded-lg shadow-md" data-scroll="fade-in">
+                    <h5 class="font-semibold text-neon-yellow mb-4 text-lg">Educational Objectives</h5>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <ul class="text-sm text-gray-400 space-y-2 text-left">
+                            <li class="flex items-start">
+                                <i class="fas fa-graduation-cap text-neon-yellow ml-2 mt-1"></i>
+                                Apply knowledge in motion mechanics, electromechanics, and automated control
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-graduation-cap text-neon-yellow ml-2 mt-1"></i>
+                                Master 3D modeling and design software
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-graduation-cap text-neon-yellow ml-2 mt-1"></i>
+                                Develop a programmable logic control system
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-graduation-cap text-neon-yellow ml-2 mt-1"></i>
+                                Selection and integration of sensors and actuators
+                            </li>
+                        </ul>
+                        <ul class="text-sm text-gray-400 space-y-2 text-left">
+                            <li class="flex items-start">
+                                <i class="fas fa-graduation-cap text-neon-yellow ml-2 mt-1"></i>
+                                Prepare technical, market, financial, and operational studies
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-graduation-cap text-neon-yellow ml-2 mt-1"></i>
+                                Project management and professional documentation
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-graduation-cap text-neon-yellow ml-2 mt-1"></i>
+                                Risk analysis and quality assurance
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-8" data-scroll="fade-in">
+                <h4 class="font-semibold text-neon-purple mb-6 text-xl">
+                    <span class="icon-wrapper mr-3">
+                        <i class="fas fa-star"></i>
+                    </span>
+                    1.4 Project Importance
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="highlight-box bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+                        <h5 class="font-semibold text-neon-purple mb-4 text-lg">Economic Importance</h5>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-dollar-sign text-neon-green ml-2 mt-1"></i>
+                                Provide a low-cost local alternative to imported machines
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chart-line text-neon-green ml-2 mt-1"></i>
+                                Increase productivity through multi-lane packaging (3-5 lanes working simultaneously)
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-users text-neon-green ml-2 mt-1"></i>
+                                Reduce reliance on costly and imprecise manual labor
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-trophy text-neon-green ml-2 mt-1"></i>
+                                Enable small factories to compete with high-quality products
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-handshake text-neon-green ml-2 mt-1"></i>
+                                Encourage investors to enter the packaging machine manufacturing field
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="highlight-box bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+                        <h5 class="font-semibold text-neon-purple mb-4 text-lg">Industrial & Environmental Importance</h5>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-industry text-neon-blue ml-2 mt-1"></i>
+                                Meet the needs of factories that rely on Stick Pack packaging
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-shield-alt text-neon-blue ml-2 mt-1"></i>
+                                Ensure packaging quality, tight sealing, precise product distribution
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-tools text-neon-blue ml-2 mt-1"></i>
+                                Provide spare parts locally, facilitating maintenance and reducing costs
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-up text-neon-blue ml-2 mt-1"></i>
+                                Improve the efficiency of local factories
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-leaf text-neon-green ml-2 mt-1"></i>
+                                Reduce waste from imprecise manual packaging
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-recycle text-neon-green ml-2 mt-1"></i>
+                                Possibility of using environmentally friendly packaging materials
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-compress text-neon-green ml-2 mt-1"></i>
+                                Reduce the amount of plastic used compared to large packages
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="highlight-box bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+                    <h5 class="font-semibold text-neon-purple mb-4 text-lg">Social Importance</h5>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-home text-neon-pink ml-2 mt-1"></i>
+                                Meet society's need for small packages suitable for daily individual consumption
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-heart text-neon-pink ml-2 mt-1"></i>
+                                Provide diverse packaging options that meet the needs of low-income families
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-child text-neon-pink ml-2 mt-1"></i>
+                                Provide products that are easy to open and use for children and the elderly
+                            </li>
+                        </ul>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-brain text-neon-pink ml-2 mt-1"></i>
+                                Promote a culture of smart consumption by reducing food waste
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-briefcase text-neon-pink ml-2 mt-1"></i>
+                                Create job opportunities by providing technical jobs in manufacturing, operation and machine maintenance
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Description -->
+        <div id="technical" class="content-section">
+            <h2 class="section-title text-4xl mb-8"  data-scroll="fade-left">
+                <span class="icon-wrapper">
+                    <i class="fas fa-cogs"></i>
+                </span>
+                2. Technical Project Description
+            </h2>
+
+            <div class="highlight-box bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+                <h3 class="text-2xl font-semibold text-neon-purple mb-4">Packaging Machine Components</h3>
+                <p class="text-gray-300 mb-4 leading-relaxed">
+                    The machine consists of a filling system and a packaging system, each containing several basic components that work together to complete the filling and packaging process.
+                </p>
+            </div>
+
+            <!-- Packaging System Components -->
+            <div class="mb-8">
+                <h4 class="text-2xl font-semibold text-gray-200 mb-6">
+                    <span class="icon-wrapper mr-3">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </span>
+                    2.1 Packaging System Components
+                </h4>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Film Roll Unwind Unit -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+                        <h5 class="font-semibold text-neon-blue mb-4 text-lg">2.1.1 Film Roll Unwind Unit</h5>
+                        <img src="film-roll-unwind-system.jpg" alt="Film Roll Unwind System" class="photo-placeholder">
+                        <p class="text-sm text-gray-400 mb-4">
+                            A shaft that carries the film roll with a brake system for tension control and an end-of-roll sensor
+                        </p>
+                        <div class="mt-4">
+                            <h6 class="font-semibold text-gray-300 mb-2">Individual Working Principle:</h6>
+                            <p class="text-xs text-gray-400 mb-3">Provides raw film continuously with appropriate tension, with early warning when material runs out</p>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300 mb-2">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">Provides the following stages with a film strip optimally tensioned, ensuring smooth filling and packaging process</p>
+                        </div>
+                    </div>
+
+                    <!-- Dancer Roller Unit -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+                        <h5 class="font-semibold text-neon-blue mb-4 text-lg">2.1.2 Dancer Roller Unit</h5>
+                        <img src="dancer-roller-system.jpg" alt="Dancer Roller System" class="photo-placeholder">
+                        <p class="text-sm text-gray-400 mb-4">
+                            A moving arm that absorbs sudden changes in film tension
+                        </p>
+                        <div class="mt-4">
+                            <h6 class="font-semibold text-gray-300 mb-2">Individual Working Principle:</h6>
+                            <p class="text-xs text-gray-400 mb-3">Acts as a film insulator to absorb shocks resulting from changes in film pulling speed</p>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300 mb-2">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">Ensures the film reaches filling and sealing stages with ideal tension that directly affects package size accuracy and sealing quality</p>
+                        </div>
+                    </div>
+
+                    <!-- Registration & Guide Unit -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+                        <h5 class="font-semibold text-neon-blue mb-3">2.1.3 Registration & Guide Unit</h5>
+                        <img src="‪registration-guide-system.jpg" alt="Registration & Guide System" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Guide rollers with servo motor and optical sensor to read registration mark
+                        </p>
+                        <div class="mt-3">
+                            <h6 class="font-semibold text-gray-300">Individual Working Principle:</h6>
+                            <ul class="text-xs text-gray-400 space-y-1">
+                                <li>• Sensor captures registration mark on film</li>
+                                <li>• Activates index motor to pull film away from registration mark</li>
+                                <li>• Returns load to standby position</li>
+                            </ul>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">Ensures film advances precisely according to required distances for each printing, cutting or folding operation</p>
+                        </div>
+                    </div>
+
+                    <!-- Slitting Unit -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+                        <h5 class="font-semibold text-neon-blue mb-3">2.1.4 Slitting Unit</h5>
+                        <img src="film-slitter.jpg" alt="Film Slitter" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Cutting wheel to slit film longitudinally into two equal strips
+                        </p>
+                        <div class="mt-3">
+                            <h6 class="font-semibold text-gray-300">Individual Working Principle:</h6>
+                            <p class="text-xs text-gray-400">Cut film longitudinally without tearing</p>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">Secures preparation of two film strips for folding stage and entry of filling tubes</p>
+                        </div>
+                    </div>
+
+                    <!-- Folding Unit -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+                        <h5 class="font-semibold text-neon-blue mb-3">2.1.5 Folding Unit</h5>
+                        <img src="folding-unit.jpg" alt="Folding Unit" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Set of rollers drawing a path similar to letter "V" to fold film
+                        </p>
+                        <div class="mt-3">
+                            <h6 class="font-semibold text-gray-300">Individual Working Principle:</h6>
+                            <ul class="text-xs text-gray-400 space-y-1">
+                                <li>• Divide film into two identical wrinkle-free layers</li>
+                                <li>• Maintain their balance and alignment</li>
+                            </ul>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">Ensures both layers reach in front of filling heads simultaneously and with required accuracy</p>
+                        </div>
+                    </div>
+
+                    <!-- Printing Unit -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+                        <h5 class="font-semibold text-neon-blue mb-3">2.1.6 Printing & Registration Unit</h5>
+                        <img src="print-registration-tunnel.jpg" alt="Print & Registration Tunnel" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Smart printing system that prints product data in real time
+                        </p>
+                        <div class="mt-3">
+                            <h6 class="font-semibold text-gray-300">Individual Working Principle:</h6>
+                            <ul class="text-xs text-gray-400 space-y-1">
+                                <li>• Sensor captures registration mark and sends signal to PLC</li>
+                                <li>• Activates printer to print data at the right moment synchronized with sensor signal</li>
+                            </ul>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">Ensures synchronized printing at specified location before filling and sealing stage</p>
+                        </div>
+                    </div>
+
+                    <!-- Vertical Sealing Unit -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+                        <h5 class="font-semibold text-neon-blue mb-3">2.1.7 Vertical Sealing Unit</h5>
+                        <img src="‪vertical-sealing-jaws.jpg" alt="Vertical Sealing Jaws" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            3 pairs of heating plates to create tight longitudinal seal
+                        </p>
+                        <div class="mt-3">
+                            <h6 class="font-semibold text-gray-300">Individual Working Principle:</h6>
+                            <p class="text-xs text-gray-400">Apply heat and pressure to create tight longitudinal seal along formed film</p>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">After slitting film and placing it over each other, this unit seals longitudinal edges of film forming a tube closed from sides ready for filling</p>
+                        </div>
+                    </div>
+
+                    <!-- Pulling Unit -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+                        <h5 class="font-semibold text-neon-blue mb-3">2.1.8 Pulling Unit</h5>
+                        <img src="pull-belts.jpg" alt="Pull Belts" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Pair of rubber rollers to pull film vertically downward
+                        </p>
+                        <div class="mt-3">
+                            <h6 class="font-semibold text-gray-300">Individual Working Principle:</h6>
+                            <p class="text-xs text-gray-400">Pulls film downward precisely to ensure required package length</p>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">These rollers ensure smooth and steady film advancement through filling and sealing stages, directly affecting package size accuracy and sealing quality</p>
+                        </div>
+                    </div>
+
+                    <!-- Horizontal Sealing Unit -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+                        <h5 class="font-semibold text-neon-blue mb-3">2.1.9 Horizontal Sealing Unit</h5>
+                        <img src="horizontal-sealing-jaws.jpg" alt="Horizontal Sealing Jaws" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Pair of movable heating plates to create horizontal seal
+                        </p>
+                        <div class="mt-3">
+                            <h6 class="font-semibold text-gray-300">Individual Working Principle:</h6>
+                            <p class="text-xs text-gray-400">Creates tight transverse link isolating packages from each other</p>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">Packages are closed from top after filling, and next packages are prepared for closing from bottom, isolating filled packages from each other</p>
+                        </div>
+                    </div>
+
+                    <!-- Cutting Unit -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+                        <h5 class="font-semibold text-neon-blue mb-3">2.1.10 Cutting Unit</h5>
+                        <img src="cutting-mechanism.jpg" alt="Cutting Mechanism" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Sharp knife separates filled packages from continuous film roll
+                        </p>
+                        <div class="mt-3">
+                            <h6 class="font-semibold text-gray-300">Individual Working Principle:</h6>
+                            <p class="text-xs text-gray-400">Separates filled packages cleanly and precisely</p>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">Ensures separation of packages individually after completion of filling and sealing process</p>
+                        </div>
+                    </div>
+
+                    <!-- Outfeed Conveyor Unit -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+                        <h5 class="font-semibold text-neon-blue mb-3">2.1.11 Outfeed Conveyor Unit</h5>
+                        <img src="outfeed-conveyor.jpg" alt="Outfeed Conveyor" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Conveyor belt receives filled and cut packages
+                        </p>
+                        <div class="mt-3">
+                            <h6 class="font-semibold text-gray-300">Individual Working Principle:</h6>
+                            <p class="text-xs text-gray-400">Transports finished products away from work area</p>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">Ensures continuity of production flow and prevents accumulation of packages at machine outlet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filling System Components -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4">
+                    <i class="fas fa-flask ml-2"></i>2.2 Filling System Components
+                </h4>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Supply Tank -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+                        <h5 class="font-semibold text-neon-green mb-3">2.2.1 Supply Tank</h5>
+                        <img src="supply-tank.jpg" alt="Supply Tank" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Large conical stainless steel vessel for liquid storage
+                        </p>
+                        <div class="mt-3">
+                            <h6 class="font-semibold text-gray-300">Individual Working Principle:</h6>
+                            <p class="text-xs text-gray-400">Acts as temporary liquid reservoir, ensures continuous and regular supply to filling unit</p>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">Ensures sufficient liquid availability for continuous filling, prevents interruption of product flow to system</p>
+                        </div>
+                    </div>
+
+                    <!-- Linear Servo Motor -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+                        <h5 class="font-semibold text-neon-green mb-3">2.2.2 Linear Servo Motor</h5>
+                        <img src="linear-servo-motor.jpg" alt="Linear Servo Motor" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Electric motor providing precise and controlled linear motion
+                        </p>
+                        <div class="mt-3">
+                            <h6 class="font-semibold text-gray-300">Individual Working Principle:</h6>
+                            <p class="text-xs text-gray-400">Converts electrical energy to direct linear motion without need for intermediate mechanical components</p>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">Controls movement of cylinders and filling tubes, allowing measurement of very precise liquid quantities</p>
+                        </div>
+                    </div>
+
+                    <!-- Piston Cylinders -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+                        <h5 class="font-semibold text-neon-green mb-3">2.2.3 Piston Cylinders</h5>
+                        <img src="piston-cylinders.jpg" alt="Piston Cylinders" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Precise metal cylinders with moving pistons inside
+                        </p>
+                        <div class="mt-3">
+                            <h6 class="font-semibold text-gray-300">Individual Working Principle:</h6>
+                            <p class="text-xs text-gray-400">When piston is pulled back inside cylinder, liquid is drawn from supply tank through suction valve</p>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">Works in coordination with servo motors to measure exact volume of liquid filled in each package</p>
+                        </div>
+                    </div>
+
+                    <!-- Liquid Manifold -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+                        <h5 class="font-semibold text-neon-green mb-3">2.2.4 Liquid Manifold</h5>
+                        <img src="liquid-manifold.jpg" alt="Liquid Manifold" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Piece distributing liquid from main pump to filling tubes
+                        </p>
+                        <div class="mt-3">
+                            <h6 class="font-semibold text-gray-300">Individual Working Principle:</h6>
+                            <p class="text-xs text-gray-400">Acts as collection and distribution center, receives liquid from one or more sources and divides it into multiple paths</p>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">Ensures each filling line gets same liquid quantity at same time</p>
+                        </div>
+                    </div>
+
+                    <!-- Filling Nozzles -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+                        <h5 class="font-semibold text-neon-green mb-3">2.2.5 Filling Nozzles</h5>
+                        <img src="filling-nozzles.jpg" alt="Filling Nozzles" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Stainless steel tubes for delivering liquid inside packages
+                        </p>
+                        <div class="mt-3">
+                            <h6 class="font-semibold text-gray-300">Individual Working Principle:</h6>
+                            <p class="text-xs text-gray-400">Direct liquid precisely to packages, with design that reduces foam or liquid splashing during filling</p>
+                        </div>
+                        <div class="mt-2">
+                            <h6 class="font-semibold text-gray-300">Working Principle in Machine:</h6>
+                            <p class="text-xs text-gray-400">Inserted between sealed film layers before horizontal sealing operation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Control & Monitoring System Components -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4">
+                    <i class="fas fa-cogs ml-2"></i>2.3 Control & Monitoring System Components
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Sensors -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+                        <h5 class="font-semibold text-neon-green mb-3">2.3.1 Sensors</h5>
+                        <img src="sensors-array.jpg" alt="Sensors Array" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Proximity sensors, registration mark, liquid level, and temperature sensors
+                        </p>
+                        <div class="mt-3">
+                            <h6 class="font-semibold text-gray-300">Benefits in Machine:</h6>
+                            <p class="text-xs text-gray-400">Act as "eyes" and "ears" of machine, provide control system with continuous data about machine status</p>
+                        </div>
+                    </div>
+
+                    <!-- Control System -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+                        <h5 class="font-semibold text-neon-green mb-3">2.3.2 Control System</h5>
+                        <img src="control-system.jpg" alt="Control System" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            PLC + HMI + IoT for automated control and remote monitoring
+                        </p>
+                    </div>
+
+                    <!-- Motors -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+                        <h5 class="font-semibold text-neon-green mb-3">2.3.3 Motors</h5>
+                        <img src="motors-assembly.jpeg" alt="Motors Assembly" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Servo and stepper motors to move various components
+                        </p>
+                    </div>
+
+                    <!-- Pneumatic System -->
+                    <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+                        <h5 class="font-semibold text-neon-green mb-3">2.3.4 Pneumatic System</h5>
+                        <img src="pneumatic-system.jpg" alt="Pneumatic System" class="photo-placeholder">
+                        <p class="text-sm text-gray-400">
+                            Air cylinders and valves for motion control and closing
+                        </p>
+                    </div>
+                </div>
+
+            <!-- Integrated Workflow -->
+            <div class="bg-gray-800 p-6 rounded-lg mb-6" data-scroll="fade-in">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4">
+                    <i class="fas fa-project-diagram ml-2"></i>2.4 Workflow Stages in Brief
+                </h4>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-neon-blue text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
+                        <p class="text-gray-300"> Unwind film roll and guide it through tension exclusion system</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-neon-blue text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
+                        <p class="text-gray-300">Form package via film slitting, folding and vertical edge sealing</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-neon-blue text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
+                        <p class="text-gray-300">Horizontal sealing while simultaneously filling by pumping liquid from supply tank to filling nozzles</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-neon-blue text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">4</div>
+                        <p class="text-gray-300">Cutting to separate filled packages</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-neon-blue text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">5</div>
+                        <p class="text-gray-300">Product output via conveyor belt</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Liquid Types -->
+            <div class="bg-blue-900 bg-opacity-50 p-6 rounded-lg" data-scroll="fade-in">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4">
+                    <i class="fas fa-tint ml-2"></i>2.5 Types of Liquids That Can Be Filled
+                </h4>
+                <p class="text-gray-300 mb-4">
+                    The machine can handle a wide range of liquid products according to the filling system used:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-gray-800 p-4 rounded-lg shadow">
+                        <h5 class="font-semibold text-neon-blue mb-2">Low Viscosity Liquids</h5>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li>• Water and juices</li>
+                            <li>• Milk and light oils</li>
+                            <li>• Carbonated drinks</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg shadow">
+                        <h5 class="font-semibold text-neon-green mb-2">Medium Viscosity Liquids</h5>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li>• Light sauces</li>
+                            <li>• Shampoo and liquid detergents</li>
+                            <li>• Liquid pharmaceutical preparations</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg shadow">
+                        <h5 class="font-semibold text-neon-pink mb-2">High Viscosity Liquids</h5>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li>• Ketchup and mayonnaise</li>
+                            <li>• Yogurt and honey</li>
+                            <li>• Liquid chocolate and toothpaste</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market Study -->
+        <div id="market" class="mb-12">
+            <h2 class="section-title text-4xl mb-8" data-scroll="fade-in"  data-scroll="fade-left">
+                <i class="fas fa-chart-line ml-2 text-red-500"></i>3. Market Study
+            </h2>
+
+            <div class="bg-red-900 bg-opacity-30 p-6 rounded-lg mb-6" data-scroll="fade-in">
+                <p class="text-gray-300">
+                    This study aims to analyze the Yemeni market's need for liquid filling machines, estimate potential demand, evaluate competition, and explore success opportunities.
+                </p>
+            </div>
+
+            <!-- Target Audience -->
+            <div class="mb-8" data-scroll="fade-in">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4"  data-scroll="fade-right">
+                    <i class="fas fa-users ml-2"></i>3.1 Target Audience
+                </h4>
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow mb-6">
+                    <p class="text-gray-300 mb-4">
+                        Based on data from the Yemeni Federation of Chambers of Commerce and Industry and regional industrial federations:
+                    </p>
+                    <ul class="text-gray-300 space-y-2">
+                        <li>• There are more than 33,000 industrial establishments operating in Yemen</li>
+                        <li>• Industries represent 47% of GDP</li>
+                        <li>• Many are concentrated in food and beverage processing sector</li>
+                        <li>• In major cities:</li>
+                        <li class="ml-6">- Juice and beverage shops (daily packaging 100-250 ml): Sana'a (250 shops), Taiz (180 shops), Aden (150 shops)</li>
+                        <li class="ml-6">- Water, detergent and essential oil packaging workshops: Ibb (70 establishments), Hodeidah (50 establishments), Dhamar (40 establishments)</li>
+                        <li class="ml-6">- Small home projects (honey, rose water, essential oils)</li>
+                    </ul>
+                </div>
+
+                <!-- Geographic Distribution Chart -->
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow mb-6"data-scroll="fade-in">
+                    <h5 class="font-semibold text-red-400 mb-3">Geographic Distribution of Target Establishments</h5>
+                    <div class="chart-container">
+                        <canvas id="targetChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expected Demand Volume -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-chart-bar ml-2"></i>3.2 Expected Demand Volume
+                </h4>
+                
+                <div class="table-responsive mb-6">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th>Governorate</th>
+                                <th>Estimated Establishments</th>
+                                <th>Penetration Rate</th>
+                                <th>Expected Machines</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sana'a</td>
+                                <td>250</td>
+                                <td>2%</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Taiz</td>
+                                <td>180</td>
+                                <td>2%</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>Aden</td>
+                                <td>150</td>
+                                <td>2%</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Ibb</td>
+                                <td>70</td>
+                                <td>2%</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Hodeidah</td>
+                                <td>50</td>
+                                <td>2%</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Dhamar</td>
+                                <td>40</td>
+                                <td>2%</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="bg-gray-700 font-semibold">
+                                <td>Total</td>
+                                <td>740</td>
+                                <td>—</td>
+                                <td>15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Expected Demand Chart -->
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                    <h5 class="font-semibold text-red-400 mb-3">Expected Demand by Governorate</h5>
+                    <div class="chart-container">
+                        <canvas id="demandChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market Competitors -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4"  data-scroll="fade-right">
+                    <i class="fas fa-trophy ml-2"></i>3.3 Market Competitors
+                </h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-yellow-900 bg-opacity-30 border border-yellow-700 p-6 rounded-lg">
+                        <h5 class="font-semibold text-yellow-400 mb-3">Local</h5>
+                        <ul class="text-sm text-yellow-300 space-y-2">
+                            <li>• Artisanal workshops producing manual machines</li>
+                            <li>• Price: $100-200</li>
+                            <li>• Lack automation and precision</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-900 bg-opacity-30 border border-red-700 p-6 rounded-lg">
+                        <h5 class="font-semibold text-red-400 mb-3">Imported</h5>
+                        <ul class="text-sm text-red-300 space-y-2">
+                            <li>• Multi-lane VFFS machines</li>
+                            <li>• Price: $12,000-20,000 before customs</li>
+                            <li>• Reach $16,000-28,000 after fees</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-900 bg-opacity-30 border border-green-700 p-6 rounded-lg">
+                        <h5 class="font-semibold text-green-400 mb-3">Our Competitive Advantage</h5>
+                        <ul class="text-sm text-green-300 space-y-2">
+                            <li>• Proposed selling price: $6,000-7,000</li>
+                            <li>• Immediate local technical support</li>
+                            <li>• Custom design for local market</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Price Comparison Chart -->
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                    <h5 class="font-semibold text-red-400 mb-3">Competitive Price Comparison</h5>
+                    <div class="chart-container">
+                        <canvas id="priceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Opportunities -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-bullseye ml-2"></i>3.4 Project Opportunities
+                </h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-blue-900 bg-opacity-30 border border-blue-700 p-6 rounded-lg">
+                        <h5 class="font-semibold text-blue-400 mb-3">Economic Opportunities</h5>
+                        <ul class="text-sm text-blue-300 space-y-2">
+                            <li>• Local manufacturing cost: $4,000-5,000</li>
+                            <li>• Selling at price saving customer 60-75%</li>
+                            <li>• Fast after-sales service</li>
+                        </ul>
+                    </div>
+                    <div class="bg-purple-900 bg-opacity-30 border border-purple-700 p-6 rounded-lg">
+                        <h5 class="font-semibold text-purple-400 mb-3">Market Opportunities</h5>
+                        <ul class="text-sm text-purple-300 space-y-2">
+                            <li>• Peak seasons: Ramadan, summer, holidays</li>
+                            <li>• Partnerships with chambers of commerce</li>
+                            <li>• Focus on major cities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary & Recommendations -->
+            <div class="bg-green-900 bg-opacity-30 border border-green-700 p-6 rounded-lg">
+                <h4 class="text-xl font-semibold text-green-400 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-check-circle ml-2"></i>3.5 Summary & Recommendations
+                </h4>
+                <div class="space-y-3 text-green-300">
+                    <p>• The Yemeni market has a real need for automated packaging machines</p>
+                    <p>• We aim to sell 15 machines in the first year focusing on major cities</p>
+                    <p>• Partnership with Federation of Chambers of Commerce and industrial unions is recommended</p>
+                    <p>• Possibility of expanding market to neighboring countries in the future</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Study -->
+        <div id="technical-study" class="mb-12">
+            <h2 class="section-title text-3xl text-gray-200 mb-6 border-b-2 border-indigo-500 pb-2" data-scroll="fade-left">
+                <i class="fas fa-microchip ml-2 text-indigo-500"></i>4. Technical Study
+            </h2>
+
+            <!-- Controller Type Selection -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-cpu ml-2"></i>4.1 Controller Type Selection (PLC)
+                </h4>
+                
+                <div class="bg-indigo-900 bg-opacity-30 border border-indigo-700 p-6 rounded-lg mb-6" data-scroll="fade-in">
+                    <h5 class="font-semibold text-indigo-400 mb-3">Siemens LOGO! 8 – 12/24 RCE</h5>
+                    <p class="text-indigo-300 mb-3">Part Number: 6ED1052-1MD08-0BA2</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h6 class="font-semibold text-indigo-300 mb-2">Technical Specifications:</h6>
+                            <ul class="text-sm text-indigo-200 space-y-1">
+                                <li>• Number of digital inputs: 8 inputs</li>
+                                <li>• Number of digital outputs: 4 outputs</li>
+                                <li>• Number of analog inputs: 4 inputs</li>
+                                <li>• Operating voltage: 12V or 24V DC</li>
+                                <li>• Support expansion up to 8 additional modules</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 class="font-semibold text-indigo-300 mb-2">Advantages:</h6>
+                            <ul class="text-sm text-indigo-200 space-y-1">
+                                <li>• Connection via Ethernet LAN</li>
+                                <li>• Cloud connection via LOGO! Web Editor</li>
+                                <li>• Web interface support</li>
+                                <li>• Full compatibility with Siemens HMI screens</li>
+                                <li>• Provides greater stability in software connection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Control System Description -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-cogs ml-2"></i>4.2 Control System Description
+                </h4>
+                
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow" data-scroll="fade-in">
+                    <p class="text-gray-300 mb-4">
+                        The control system relies on LOGO! 8.3 controller to execute an automated sequence of package forming and filling stages:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li>• Form tube from plastic film via forming collar, then seal side edges via vertical sealing unit</li>
+                            <li>• Close base of first package using horizontal sealing jaws</li>
+                            <li>• Pump liquid into package via filling tube</li>
+                            <li>• Pull film one row at a time using pulling system (motor or rollers)</li>
+                        </ul>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li>• Close head of previous package and form base of new package at same moment of horizontal sealing</li>
+                            <li>• Repeat cycle (sealing - filling - pulling) automatically with precise synchronization</li>
+                            <li>• Use optical sensor to read printed mark on film and determine stopping point accurately</li>
+                            <li>• Timing sequence between these stages is precisely controlled by internal program in PLC unit</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Operation & Control Screen -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-desktop ml-2"></i>4.3 Operation & Control Screen (HMI)
+                </h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-blue-900 bg-opacity-30 border border-blue-700 p-6 rounded-lg" data-scroll="fade-left">
+                        <h5 class="font-semibold text-blue-400 mb-3">Screen Specifications</h5>
+                        <ul class="text-sm text-blue-300 space-y-2">
+                            <li>• Model: Siemens KTP700 Basic</li>
+                            <li>• 7-inch color TFT screen</li>
+                            <li>• Display resolution: 800 x 480 pixels</li>
+                            <li>• Connection via PROFINET protocol</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-900 bg-opacity-30 border border-green-700 p-6 rounded-lg" data-scroll="fade-right">
+                        <h5 class="font-semibold text-green-400 mb-3">Functions</h5>
+                        <ul class="text-sm text-green-300 space-y-2">
+                            <li>• Start or stop system</li>
+                            <li>• Display sensor status and operations</li>
+                            <li>• Alert user about errors or stops</li>
+                            <li>• Display operation data and graphs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Used Sensors -->
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class='bx bx-pulse'></i>4.4 Used Sensors
+                </h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-700 p-4 rounded-lg shadow">
+                        <h5 class="font-semibold text-purple-400 mb-2">Inductive Proximity Sensor</h5>
+                        <p class="text-sm text-gray-400">To ensure piston reaches end of stroke accurately</p>
+                    </div>
+                    <div class="bg-gray-700 p-4 rounded-lg shadow">
+                        <h5 class="font-semibold text-purple-400 mb-2">Color Mark Sensor</h5>
+                        <p class="text-sm text-gray-400">To detect black marks printed on film surface</p>
+                    </div>
+                    <div class="bg-gray-700 p-4 rounded-lg shadow">
+                        <h5 class="font-semibold text-purple-400 mb-2">Thermocouple</h5>
+                        <p class="text-sm text-gray-400">To measure temperature of sealing jaws (PT100 RTD)</p>
+                    </div>
+                    <div class="bg-gray-700 p-4 rounded-lg shadow">
+                        <h5 class="font-semibold text-purple-400 mb-2">Roll Detection Sensor</h5>
+                        <p class="text-sm text-gray-400">To verify presence of plastic packaging roll</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Operational Study -->
+        <div id="operational" class="mb-12">
+            <h2 class="section-title text-3xl text-gray-200 mb-6 border-b-2 border-yellow-500 pb-2"  data-scroll="fade-left">
+                <i class="fas fa-tools ml-2 text-yellow-500"></i>5. Operational Study
+            </h2>
+
+            <!-- Operation Mechanism -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-play-circle ml-2"></i>5.1 Operation Mechanism
+                </h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-yellow-900 bg-opacity-30 border border-yellow-700 p-6 rounded-lg" data-scroll="fade-left">
+                        <h5 class="font-semibold text-yellow-400 mb-3">System Startup</h5>
+                        <ul class="text-sm text-yellow-300 space-y-2">
+                            <li>• Power on</li>
+                            <li>• Start system from control panel or HMI screen</li>
+                            <li>• Ensure settings appear correctly</li>
+                            <li>• Adjust timers and pump quantities as required</li>
+                        </ul>
+                    </div>
+                    <div class="bg-purple-900 bg-opacity-30 border border-purple-700 p-6 rounded-lg">
+                        <h5 class="font-semibold text-purple-400 mb-3">Trial Operation</h5>
+                        <ul class="text-sm text-purple-300 space-y-2">
+                            <li>• Test film movement and empty filling for 3-5 minutes</li>
+                            <li>• Monitor work regularity and absence of errors</li>
+                            <li>• Correct any malfunctions before running actual product</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-900 bg-opacity-30 border border-green-700 p-6 rounded-lg" data-scroll="fade-right">
+                        <h5 class="font-semibold text-green-400 mb-3">Documentation & Follow-up</h5>
+                        <ul class="text-sm text-green-300 space-y-2">
+                            <li>• Record number of pieces produced daily</li>
+                            <li>• Document any malfunction or stop occurred during operation</li>
+                            <li>• Check maintenance log when recurring problem occurs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Operation Requirements -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-clipboard-list ml-2"></i>5.2 Operation Requirements
+                </h4>
+                
+                <div class="space-y-6">
+                    <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                        <h5 class="font-semibold text-blue-400 mb-3">Electrical Power</h5>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li>• Ensure availability of stable power source (220-380 volts depending on machine type)</li>
+                            <li>• Check all electrical connections daily</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                        <h5 class="font-semibold text-green-400 mb-3">Air Pressure</h5>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li>• Ensure air pressure between 5-6 bar</li>
+                            <li>• Check leaks in pipes or connections</li>
+                            <li>• Clean air filter regularly</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                        <h5 class="font-semibold text-purple-400 mb-3">Packaging Materials</h5>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li>• Ensure roll is installed correctly and securely</li>
+                            <li>• Check film for reference mark (Eye Mark)</li>
+                            <li>• Ensure film is pulled smoothly without slipping or twisting</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                        <h5 class="font-semibold text-red-400 mb-3">Cleaning Contact Parts</h5>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li>• Clean filling pumps, tubes and knives daily</li>
+                            <li>• Do not leave food or liquid residues on moving parts</li>
+                            <li>• Use non-corrosive cleaning materials</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                        <h5 class="font-semibold text-indigo-400 mb-3">Sensor Check</h5>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li>• Test Eye Mark sensor operation before starting</li>
+                            <li>• Ensure sensor surface is clean and dust-free</li>
+                            <li>• Check limit switches at drive motor or stop positions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Required Workers & Operators -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-users ml-2"></i>5.3 Required Workers & Operators
+                </h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-blue-900 bg-opacity-30 border border-blue-700 p-6 rounded-lg" data-scroll="fade-right">
+                        <h5 class="font-semibold text-blue-400 mb-3">Machine Operator</h5>
+                        <p class="text-blue-300 mb-2">Number: 1</p>
+                        <ul class="text-sm text-blue-200 space-y-1">
+                            <li>• Start and stop machine</li>
+                            <li>• Adjust speed and filling settings</li>
+                            <li>• Monitor operation of sensors and pumps</li>
+                            <li>• Intervene at technical or mechanical malfunctions</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-900 bg-opacity-30 border border-green-700 p-6 rounded-lg">
+                        <h5 class="font-semibold text-green-400 mb-3">Raw Material Feeder</h5>
+                        <p class="text-green-300 mb-2">Number: 1</p>
+                        <ul class="text-sm text-green-200 space-y-1">
+                            <li>• Fill liquid or powder tank</li>
+                            <li>• Place packaging roll in its place</li>
+                            <li>• Monitor raw material level inside tank</li>
+                            <li>• Replace film when roll ends</li>
+                        </ul>
+                    </div>
+                    <div class="bg-yellow-900 bg-opacity-30 border border-yellow-700 p-6 rounded-lg" data-scroll="fade-left">
+                        <h5 class="font-semibold text-yellow-400 mb-3">Product Collector/Packager</h5>
+                        <p class="text-yellow-300 mb-2">Number: 1-2</p>
+                        <ul class="text-sm text-yellow-200 space-y-1">
+                            <li>• Receive packages after exiting machine</li>
+                            <li>• Arrange them in boxes or containers</li>
+                            <li>• Ensure they are free from leakage or tearing</li>
+                            <li>• Secondary packaging manually or using secondary packaging machine</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th>Machine Type</th>
+                                <th>Required Workers</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Manual/Semi-automatic</td>
+                                <td>2-3 workers</td>
+                            </tr>
+                            <tr>
+                                <td>Fully Automatic</td>
+                                <td>1-2 workers only</td>
+                            </tr>
+                            <tr>
+                                <td>Intensive Production > 60 packages/minute</td>
+                                <td>3-4 workers (including quality and packaging worker)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Periodic Maintenance -->
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-wrench ml-2"></i>5.4 Periodic Maintenance
+                </h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h5 class="font-semibold text-red-400 mb-3">Daily Maintenance</h5>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li>• Clean knives and sealing rollers from film or product residues</li>
+                            <li>• Clean filling heads (nozzles) and tubes to prevent clogging</li>
+                            <li>• Check electrical and pneumatic connections</li>
+                            <li>• Test Eye Mark sensor and ensure its response</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-red-400 mb-3">Weekly Maintenance</h5>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li>• Lubricate moving parts (if there are lubrication points)</li>
+                            <li>• Check tension of cutting knives and their installation</li>
+                            <li>• Calibrate Eye Mark and Limit Switches sensors</li>
+                            <li>• Clean air filters from dust or oil</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-blue-400 mb-3">Monthly Maintenance</h5>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li>• Check all Stepper and Servo motors for heat and sound</li>
+                            <li>• Check electrical cable integrity (for damage or cuts)</li>
+                            <li>• Measure filling accuracy with electronic scale (to ensure volume stability)</li>
+                            <li>• Comprehensive machine cleaning (including inside frame)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-purple-400 mb-3">Quarterly Maintenance</h5>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li>• Recalibrate all sensors and electronic systems</li>
+                            <li>• Check HMI control panel condition and update software if available</li>
+                            <li>• Change feeding tubes (tubing) if old or hardened</li>
+                            <li>• Check efficiency of heating elements (heaters) and replace damaged ones</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Financial Study -->
+        <div id="financial" class="mb-12">
+            <h2 class="section-title text-3xl text-gray-200 mb-6 border-b-2 border-green-500 pb-2"  data-scroll="fade-left">
+                <i class="fas fa-chart-pie ml-2 text-green-500"></i>6. Financial Study
+            </h2>
+
+            <!-- Project Cost -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-dollar-sign ml-2"></i>6.1 Approximate Project Cost
+                </h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                        <h5 class="font-semibold text-green-400 mb-3">Fixed Costs</h5>
+                        <div class="table-responsive">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Cost ($)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mechanical Components</td>
+                                        <td>2,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Electrical Components</td>
+                                        <td>1,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Control System PLC+HMI</td>
+                                        <td>800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sensors & Motors</td>
+                                        <td>700</td>
+                                    </tr>
+                                    <tr class="bg-gray-700 font-semibold">
+                                        <td>Total</td>
+                                        <td>5,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                        <h5 class="font-semibold text-blue-400 mb-3">Variable Costs</h5>
+                        <div class="table-responsive">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Monthly Cost ($)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Labor</td>
+                                        <td>600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Electricity</td>
+                                        <td>150</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maintenance</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Consumables</td>
+                                        <td>50</td>
+                                    </tr>
+                                    <tr class="bg-gray-700 font-semibold">
+                                        <td>Monthly Total</td>
+                                        <td>900</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cost Distribution Chart -->
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                    <h5 class="font-semibold text-green-400 mb-3">Cost Distribution</h5>
+                    <div class="chart-container">
+                        <canvas id="costChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expected Revenues -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-money-bill-wave ml-2"></i>6.2 Expected Revenues
+                </h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-green-900 bg-opacity-30 border border-green-700 p-6 rounded-lg">
+                        <h5 class="font-semibold text-green-400 mb-3">Conservative Scenario</h5>
+                        <ul class="text-sm text-green-300 space-y-2">
+                            <li>• Number of machines sold: 10 machines/year</li>
+                            <li>• Selling price: $6,500 per machine</li>
+                            <li>• Total revenues: $65,000</li>
+                            <li>• Profit margin: 30%</li>
+                        </ul>
+                    </div>
+                    <div class="bg-blue-900 bg-opacity-30 border border-blue-700 p-6 rounded-lg">
+                        <h5 class="font-semibold text-blue-400 mb-3">Average Scenario</h5>
+                        <ul class="text-sm text-blue-300 space-y-2">
+                            <li>• Number of machines sold: 15 machines/year</li>
+                            <li>• Selling price: $6,500 per machine</li>
+                            <li>• Total revenues: $97,500</li>
+                            <li>• Profit margin: 35%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Revenue Chart -->
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                    <h5 class="font-semibold text-green-400 mb-3">Annual Revenue Projections</h5>
+                    <div class="chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profitability Analysis -->
+            <div class="bg-gradient-to-r from-green-900 to-blue-900 p-6 rounded-lg">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-chart-line ml-2"></i>6.3 Profitability Analysis
+                </h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-800 p-4 rounded-lg shadow text-center">
+                        <div class="text-3xl font-bold text-green-400 mb-2">18 months</div>
+                        <p class="text-gray-400">Capital recovery period</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg shadow text-center">
+                        <div class="text-3xl font-bold text-blue-400 mb-2">35%</div>
+                        <p class="text-gray-400">Return on investment rate</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg shadow text-center">
+                        <div class="text-3xl font-bold text-purple-400 mb-2">$34,000</div>
+                        <p class="text-gray-400">Expected annual net profit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Risk Analysis -->
+        <div id="risks" class="mb-12">
+            <h2 class="section-title text-3xl text-gray-200 mb-6 border-b-2 border-red-500 pb-2"  data-scroll="fade-left">
+                <i class="fas fa-exclamation-triangle ml-2 text-red-500"></i>7. Risk Analysis
+            </h2>
+
+            <div class="bg-red-900 bg-opacity-30 p-6 rounded-lg mb-6">
+                <p class="text-gray-300">
+                    Risk analysis is an essential part of the feasibility study for any industrial project, as it helps identify potential problems that may face the packaging machine and develop strategies to mitigate their impact.
+                </p>
+            </div>
+
+            <!-- Potential Malfunctions -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-bug ml-2"></i>7.1 Potential Malfunctions
+                </h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-800 border border-red-700 p-6 rounded-lg shadow" data-scroll="fade-left">
+                        <h5 class="font-semibold text-red-400 mb-3">Mechanical Problems</h5>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li>• Sealing problems (weak, incomplete)</li>
+                            <li>• Film feeding problems (distortion, tearing)</li>
+                            <li>• Filling inaccuracy</li>
+                            <li>• Cutting problems</li>
+                            <li>• Damage to moving parts</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 border border-red-700 p-6 rounded-lg shadow" data-scroll="fade-right">
+                        <h5 class="font-semibold text-red-400 mb-3">Electrical Problems</h5>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li>• Sensor failures</li>
+                            <li>• PLC control panel problems</li>
+                            <li>• Short circuits</li>
+                            <li>• Motor stops</li>
+                            <li>• Electrical connection problems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Power Outage -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-power-off ml-2"></i>7.2 Power Outage
+                </h4>
+                
+                <div class="bg-yellow-900 bg-opacity-30 border border-yellow-700 p-6 rounded-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-yellow-400 mb-3">Potential Impacts:</h5>
+                            <ul class="text-sm text-yellow-300 space-y-1">
+                                <li>• Sudden production stop</li>
+                                <li>• Damage to products in process</li>
+                                <li>• Damage to sensitive equipment</li>
+                                <li>• Need for reset</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-yellow-400 mb-3">Proposed Solutions:</h5>
+                            <ul class="text-sm text-yellow-300 space-y-1">
+                                <li>• Uninterruptible power supply UPS systems</li>
+                                <li>• Backup power generators</li>
+                                <li>• Safe shutdown systems</li>
+                                <li>• Emergency protocols</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Liquid Problems -->
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+                    <i class="fas fa-flask ml-2"></i>7.3 Liquid Problems
+                </h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-blue-900 bg-opacity-30 border border-blue-700 p-6 rounded-lg" data-scroll="fade-right">
+                        <h5 class="font-semibold text-blue-400 mb-3">Common Problems</h5>
+                        <ul class="text-sm text-blue-300 space-y-2">
+                            <li>• Viscosity change</li>
+                            <li>• Presence of solid particles</li>
+                            <li>• Foam formation</li>
+                            <li>• Corrosion</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-900 bg-opacity-30 border border-green-700 p-6 rounded-lg" data-scroll="fade-left">
+                        <h5 class="font-semibold text-green-400 mb-3">Proposed Solutions</h5>
+                        <ul class="text-sm text-green-300 space-y-2">
+                            <li>• Temperature control systems</li>
+                            <li>• Advanced filters</li>
+                            <li>• Special filling systems</li>
+                            <li>• Corrosion-resistant materials</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Programming & Control Errors -->
+            <div class="bg-purple-900 bg-opacity-30 border border-purple-700 p-6 rounded-lg">
+                <h4 class="text-xl font-semibold text-purple-400 mb-4">
+                    <i class="fas fa-code ml-2"></i>7.4 Programming & Control Errors
+                </h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h5 class="font-semibold text-purple-300 mb-3">Risks:</h5>
+                        <ul class="text-sm text-purple-200 space-y-1">
+                            <li>• Process desynchronization</li>
+                            <li>• Settings errors</li>
+                            <li>• Unexplained machine stop</li>
+                            <li>• Difficulty in diagnosing malfunctions</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-purple-300 mb-3">Solutions:</h5>
+                        <ul class="text-sm text-purple-200 space-y-1">
+                            <li>• Comprehensive software testing</li>
+                            <li>• Adequate operator training</li>
+                            <li>• Preventive maintenance programs</li>
+                            <li>• Software backups</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- References -->  
+<div id="references" class="mb-12" dir="ltr">  
+  <h2 class="section-title text-3xl text-gray-200 mb-6 border-b-2 border-gray-500 pb-2"  data-scroll="fade-left">  
+    <i class="fas fa-book ml-2 text-gray-400"></i>8. References  
+  </h2>  
+
+  <div class="bg-gray-800 p-6 rounded-lg">  
+    <div class="space-y-4 text-sm text-gray-400">  
+      <div class="border-l-4 border-blue-500 pl-4">  
+        <p><strong>[1]</strong> Vertical Form Fill Seal Machines. Viking Masek. link: <a href="https://vikingmasek.com/packaging-machine-resources/packaging-machine-blog/a-guide-to-vertical-form-fill-seal-machines" class="text-blue-400 hover:underline">https://vikingmasek.com/packaging-machine-resources/packaging-machine-blog/a-guide-to-vertical-form-fill-seal-machines</a></p>  
+      </div>  
+      <div class="border-l-4 border-green-500 pl-4">  
+        <p><strong>[2]</strong> VFFS Packaging Machine. Spack Machine. link: <a href="https://www.spackmachine.com/vffs-machines-guide-working-principle-types-filling-methods/" class="text-blue-400 hover:underline">https://www.spackmachine.com/vffs-machines-guide-working-principle-types-filling-methods/</a></p>  
+      </div>  
+      <div class="border-l-4 border-red-500 pl-4">  
+        <p><strong>[3]</strong> VFFS Machines. GEA. link: <a href="https://www.gea.com/en/products/vffs-machines.jsp" class="text-blue-400 hover:underline">https://www.gea.com/en/products/vffs-machines.jsp</a></p>  
+      </div>  
+      <div class="border-l-4 border-yellow-500 pl-4">  
+        <p><strong>[4]</strong> Vertical Form Fill Seal Machines. TNA Solutions. link: <a href="https://www.tnasolutions.com/products/packaging-equipment/vertical-form-fill-seal-machines/" class="text-blue-400 hover:underline">https://www.tnasolutions.com/products/packaging-equipment/vertical-form-fill-seal-machines/</a></p>  
+      </div>  
+      <div class="border-l-4 border-purple-500 pl-4">  
+        <p><strong>[5]</strong> VFFS Baggers. Rovema. link: <a href="https://www.rovema-na.com/products/vffs-baggers" class="text-blue-400 hover:underline">https://www.rovema-na.com/products/vffs-baggers</a></p>  
+      </div>  
+      <div class="border-l-4 border-indigo-500 pl-4">  
+        <p><strong>[6]</strong> Vertical Form Fill Seal. Bosch Packaging. link: <a href="https://www.syntegon.com/products/vertical-form-fill-seal/" class="text-blue-400 hover:underline">https://www.syntegon.com/products/vertical-form-fill-seal/</a></p>  
+      </div>  
+      <div class="border-l-4 border-pink-500 pl-4">  
+        <p><strong>[7]</strong> What is a VFFS Machine? All-Fill. link: <a href="https://all-fill.com/blog/what-is-a-vffs-machine" class="text-blue-400 hover:underline">https://all-fill.com/blog/what-is-a-vffs-machine</a></p>  
+      </div>  
+      <div class="border-l-4 border-teal-500 pl-4">  
+        <p><strong>[8]</strong> How VFFS Machines Work. Matrix. link: <a href="https://www.matrixpm.com/packaging-machines/vffs/" class="text-blue-400 hover:underline">https://www.matrixpm.com/packaging-machines/vffs/</a></p>  
+      </div>  
+      <div class="border-l-4 border-red-500 pl-4">  
+        <p><strong>[9]</strong> VFFS Machines - General Info. Omori Europe. link: <a href="https://www.omorieurope.com/en/packaging-machines/vffs" class="text-blue-400 hover:underline">https://www.omorieurope.com/en/packaging-machines/vffs</a></p>  
+      </div>  
+      <div class="border-l-4 border-blue-500 pl-4">  
+        <p><strong>[10]</strong> VFFS Equipment Overview. Paxiom. link: <a href="https://www.paxiom.com/vertical-form-fill-seal-machines/" class="text-blue-400 hover:underline">https://www.paxiom.com/vertical-form-fill-seal-machines/</a></p>  
+      </div>  
+      <div class="border-l-4 border-green-500 pl-4">  
+        <p><strong>[11]</strong> VFFS Baggers. Weighpack. link: <a href="https://www.weighpack.com/vffs-machines/" class="text-blue-400 hover:underline">https://www.weighpack.com/vffs-machines/</a></p>  
+      </div>  
+      <div class="border-l-4 border-red-500 pl-4">  
+        <p><strong>[12]</strong> VFFS Sealing Jaws. Greener Corp. link: <a href="https://greenercorp.com/resource-blog/pressure-heat-adjustments-sealing-jaw-designs/" class="text-blue-400 hover:underline">https://greenercorp.com/resource-blog/pressure-heat-adjustments-sealing-jaw-designs/</a></p>  
+      </div>  
+      <div class="border-l-4 border-yellow-500 pl-4">  
+        <p><strong>[13]</strong> Vertical Form Fill Seal (VFFS) Packaging Machines. BW Flexible Systems. link: <a href="https://www.bwfurlongandassociates.com/vffs-machines" class="text-blue-400 hover:underline">https://www.bwfurlongandassociates.com/vffs-machines</a></p>  
+      </div>  
+      <div class="border-l-4 border-purple-500 pl-4">  
+        <p><strong>[14]</strong> Understanding VFFS Technology. PAC Machinery. link: <a href="https://www.pacmachinery.com/products/vffs-machines/" class="text-blue-400 hover:underline">https://www.pacmachinery.com/products/vffs-machines/</a></p>  
+      </div>  
+      <div class="border-l-4 border-indigo-500 pl-4">  
+        <p><strong>[15]</strong> Vertical Form Fill Seal Machines Guide. PPMA. link: <a href="https://www.ppma.co.uk/products/vertical-form-fill-seal-machines.html" class="text-blue-400 hover:underline">https://www.ppma.co.uk/products/vertical-form-fill-seal-machines.html</a></p>  
+      </div>  
+      <div class="border-l-4 border-pink-500 pl-4">  
+        <p><strong>[16]</strong> VFFS Machines Types and Benefits. KBW Packaging. link: <a href="https://www.kbw-packaging.com/machines/form-fill-seal-machines/" class="text-blue-400 hover:underline">https://www.kbw-packaging.com/machines/form-fill-seal-machines/</a></p>  
+      </div>  
+      <div class="border-l-4 border-teal-500 pl-4">  
+        <p><strong>[17]</strong> Flexible Packaging Equipment. Mespack. link: <a href="https://www.mespack.com/machines/vffs/" class="text-blue-400 hover:underline">https://www.mespack.com/machines/vffs/</a></p>  
+      </div>  
+      <div class="border-l-4 border-red-500 pl-4">  
+        <p><strong>[18]</strong> VFFS Technical Overview. Mamata Machinery. link: <a href="https://www.mamata.com/vffs-vertical-form-fill-seal-machine.html" class="text-blue-400 hover:underline">https://www.mamata.com/vffs-vertical-form-fill-seal-machine.html</a></p>  
+      </div>  
+      <div class="border-l-4 border-blue-500 pl-4">  
+        <p><strong>[19]</strong> VFFS Machine Video Demos. ILAPAK. link: <a href="https://www.ilapak.com/packaging-machines/vffs" class="text-blue-400 hover:underline">https://www.ilapak.com/packaging-machines/vffs</a></p>  
+      </div>  
+      <div class="border-l-4 border-green-500 pl-4">  
+        <p><strong>[20]</strong> VFFS Automation Integration. Heat and Control. link: <a href="https://www.heatandcontrol.com/solutions/packaging/vertical-form-fill-seal/" class="text-blue-400 hover:underline">https://www.heatandcontrol.com/solutions/packaging/vertical-form-fill-seal/</a></p>  
+      </div>  
+      <div class="border-l-4 border-red-500 pl-4">  
+        <p><strong>[21]</strong> Small Footprint VFFS Machines. Nichrome. link: <a href="https://www.nichrome.com/machines/vertical-form-fill-seal-machines/" class="text-blue-400 hover:underline">https://www.nichrome.com/machines/vertical-form-fill-seal-machines/</a></p>  
+      </div>  
+      <div class="border-l-4 border-yellow-500 pl-4">  
+        <p><strong>[22]</strong> Hygienic VFFS Designs. Hayssen Flexible Systems. link: <a href="https://www.hayssen.com/vertical-form-fill-seal" class="text-blue-400 hover:underline">https://www.hayssen.com/vertical-form-fill-seal</a></p>  
+      </div>  
+      <div class="border-l-4 border-purple-500 pl-4">  
+        <p><strong>[23]</strong> Vertical FFS Machines with Servo. Fres-co System USA. link: <a href="https://www.fresco.com/products/vertical-form-fill-seal/" class="text-blue-400 hover:underline">https://www.fresco.com/products/vertical-form-fill-seal/</a></p>  
+      </div>  
+      <div class="border-l-4 border-indigo-500 pl-4">  
+        <p><strong>[24]</strong> Twin Tube VFFS Overview. SN Maschinenbau. link: <a href="https://www.sn-maschinenbau.com/en/vertical-form-fill-seal-machine-vffs/" class="text-blue-400 hover:underline">https://www.sn-maschinenbau.com/en/vertical-form-fill-seal-machine-vffs/</a></p>  
+      </div>  
+      <div class="border-l-4 border-pink-500 pl-4">  
+        <p><strong>[25]</strong> Vertical Form Fill Seal with Multi-Lane. Matrix Packaging. link: <a href="https://www.matrixpm.com/machines/vffs/" class="text-blue-400 hover:underline">https://www.matrixpm.com/machines/vffs/</a></p>  
+      </div>
+      <div class="border-l-4 border-teal-500 pl-4">
+        <p><strong>[26]</strong> VFFS Machine Applications. Viking Masek. link: <a href="https://www.vikingmasek.com/packaging-machines/form-fill-seal/vffs" class="text-blue-400 hover:underline">https://www.vikingmasek.com/packaging-machines/form-fill-seal/vffs</a></p>
+      </div>
+      <div class="border-l-4 border-red-500 pl-4">
+        <p><strong>[27]</strong> Sachet Packing with VFFS. Turpack. link: <a href="https://www.turpack.com/vffs-vertical-form-fill-and-seal-machine/" class="text-blue-400 hover:underline">https://www.turpack.com/vffs-vertical-form-fill-and-seal-machine/</a></p>
+      </div>
+      <div class="border-l-4 border-blue-500 pl-4">
+        <p><strong>[28]</strong> Stick Pack and VFFS. Aranow. link: <a href="https://www.aranow.com/en/solutions/vertical-form-fill-seal/" class="text-blue-400 hover:underline">https://www.aranow.com/en/solutions/vertical-form-fill-seal/</a></p>
+      </div>
+      <div class="border-l-4 border-green-500 pl-4">
+        <p><strong>[29]</strong> High Speed VFFS Machine. Rovema. link: <a href="https://www.rovema.com/packaging-machines/vertical-form-fill-seal" class="text-blue-400 hover:underline">https://www.rovema.com/packaging-machines/vertical-form-fill-seal</a></p>
+      </div>
+      <div class="border-l-4 border-red-500 pl-4">
+        <p><strong>[30]</strong> Servo Controlled VFFS. Bosch Packaging. link: <a href="https://www.boschpackaging.com/vertical-form-fill-seal/" class="text-blue-400 hover:underline">https://www.boschpackaging.com/vertical-form-fill-seal/</a></p>
+      </div>
+      <div class="border-l-4 border-yellow-500 pl-4">
+        <p><strong>[31]</strong> Continuous Motion VFFS Systems. GEA Group. link: <a href="https://www.gea.com/en/products/vffs-machines.jsp" class="text-blue-400 hover:underline">https://www.gea.com/en/products/vffs-machines.jsp</a></p>
+      </div>
+      <div class="border-l-4 border-purple-500 pl-4">
+        <p><strong>[32]</strong> Quad Seal Bag with VFFS. AlliedFlex. link: <a href="https://www.alliedflex.com/vffs-machinery/" class="text-blue-400 hover:underline">https://www.alliedflex.com/vffs-machinery/</a></p>
+      </div>
+      <div class="border-l-4 border-indigo-500 pl-4">
+        <p><strong>[33]</strong> Vertical Sealing for Pouches. Omori Machinery. link: <a href="https://www.omori.eu/en/products/vffs/" class="text-blue-400 hover:underline">https://www.omori.eu/en/products/vffs/</a></p>
+      </div>
+      <div class="border-l-4 border-pink-500 pl-4">
+        <p><strong>[34]</strong> VFFS Machine Features and Specs. Fuji Packaging. link: <a href="https://www.fujipackaging.com/products/vertical-form-fill-seal/" class="text-blue-400 hover:underline">https://www.fujipackaging.com/products/vertical-form-fill-seal/</a></p>
+      </div>
+      <div class="border-l-4 border-teal-500 pl-4">
+        <p><strong>[35]</strong> Integration of VFFS in Production Lines. IMA Group. link: <a href="https://www.ima.it/packaging/vffs/" class="text-blue-400 hover:underline">https://www.ima.it/packaging/vffs/</a></p>
+      </div>
+    </div>
+  </div>
+
+        <!-- Conclusion -->
+        <div class="text-center bg-gradient-to-r from-blue-900 to-green-900 p-8 rounded-lg">
+            <h3 class="text-2xl font-semibold text-white mb-4">Conclusion</h3>
+            <p class="text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                This feasibility study represents a comprehensive roadmap for developing the multi-lane packaging machine project, which aims to meet local market needs by providing an advanced technical solution at a reasonable cost. The project team looks forward to turning this study into a practical reality that contributes to the development of local industry and supports the national economy.
+            </p>
+            <div class="mt-6 text-sm text-gray-400">
+                <p><strong>This study was prepared under the supervision of Dr. Mohammed Ahmed Abdullah Al-Madhwahi, Head of Mechatronics Department, with the participation of field experts</strong></p>
+                <div class="divider my-4"></div>
+                
+                <!-- Team Section -->
+                <div class="team-section mt-8">
+                    <h5 class="font-semibold text-white mb-6 text-xl">Project Team:</h5>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                        <!-- Team Member 1 -->
+                        <div class="team-member text-center" data-scroll="fade-left">
+                            <div class="member-photo neon-circle">
+                                <img src="osama.jpg" alt="Osama Mohammed Al-Sharma" class="w-32 h-32 rounded-full mx-auto pulse">
+                            </div>
+                            <p class="mt-4 text-neon-blue">Osama Mohammed Al-Sharma</p>
+                        </div>
+                        
+                        <!-- Team Member 2 -->
+                        <div class="team-member text-center">
+                            <div class="member-photo neon-circle">
+                                <img src="hussein.jpg" alt="Hussein Saeed Masoud" class="w-32 h-32 rounded-full mx-auto pulse">
+                            </div>
+                            <p class="mt-4 text-neon-green">Hussein Saeed Masoud</p>
+                        </div>
+                        
+                        <!-- Team Member 3 -->
+                        <div class="team-member text-center" data-scroll="fade-right">
+                            <div class="member-photo neon-circle">
+                                <img src="sahar.jpg" alt="Sahar Faisal Al-Taibi" class="w-32 h-32 rounded-full mx-auto pulse">
+                            </div>
+                            <p class="mt-4 text-neon-purple">Sahar Faisal Al-Taibi</p>
+                        </div>
+                        
+                        <!-- Team Member 4 -->
+                        <div class="team-member text-center"  data-scroll="fade-left">
+                            <div class="member-photo neon-circle">
+                                <img src="abdulnasser1.jpg" alt="Abdulnasser Jamal Al-Sanabani" class="w-32 h-32 rounded-full mx-auto pulse">
+                            </div>
+                            <p class="mt-4 text-neon-yellow">Abdulnasser Jamal Al-Sanabani</p>
+                        </div>
+                        
+                        <!-- Team Member 5 -->
+                        <div class="team-member text-center">
+                            <div class="member-photo neon-circle">
+                                <img src="abdulnasser2.jpg" alt="Abdulnasser Mohammed Saad" class="w-32 h-32 rounded-full mx-auto pulse">
+                            </div>
+                            <p class="mt-4 text-neon-blue">Abdulnasser Mohammed Saad</p>
+                        </div>
+                        
+                        <!-- Team Member 6 -->
+                        <div class="team-member text-center" data-scroll="fade-right">
+                            <div class="member-photo neon-circle">
+                                <img src="kamal.jpg" alt="Kamal Abdulwahab Al-Rawafi" class="w-32 h-32 rounded-full mx-auto pulse">
+                            </div>
+                            <p class="mt-4 text-neon-orange">Kamal Abdulwahab Al-Rawafi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="divider my-4"></div>
+                <p>Mechatronics Department - Dhamar University - 2025/2026</p>
+                <div class="mt-4 text-neon-blue">••••••••••تم بحمد الله تعالى••••••••••</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
